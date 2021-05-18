@@ -1,4 +1,4 @@
-# Pangle custom adapter sample
+# Pangle iOS SDK custom adapter sample
 
 This guide is for you to build Pangle iOS SDK's mediation for your adnetwork.
 

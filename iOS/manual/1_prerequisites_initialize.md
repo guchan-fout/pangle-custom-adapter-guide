@@ -11,15 +11,29 @@ This guide is for you to build Pangle iOS SDK's mediation for your adnetwork.
 
 
 
-
 ## Initialize
 
-`+ (void)setAppID:(NSString *)appID;` is the method for initializing Pangle SDK with the APP ID as the argument.
+`+ (void)setAppID:(NSString *)appID;` is the method for initializing Pangle SDK with the `AppID` as the argument.
 
+* `AppID` is used to identify your app after you add an app on pangle's platform.
+
+
+**If you need to set `GDPR` or `COPPA`. We strongly recommend to set it before calling `setAppID`.**
 
 This is a sample for initialize
 ```obj-c
-- (void)initPangleWith:(NSString *)appId collectPersonalInfo:(BOOL)collectPersonalInfo complete:(void(^)(NSError *))complete {
+@interface PangleAdapterConfig : YourMediationAdapterConfig
+
+- (void)initMediationAdnetworkWith:(NSString *)appId collectPersonalInfo:(BOOL)collectPersonalInfo complete:(void(^)(NSError *))complete;
+
+@end
+
+@implementation PangleAdapterConfig
+
+static NSString * const errorDomain = @"pangle";
+static int const errorCode = 123;
+
+- (void)initMediationAdnetworkWith:(NSString *)appId collectPersonalInfo:(BOOL)collectPersonalInfo complete:(void(^)(NSError *))complete {
     if (!(appId && [appId isKindOfClass:[NSString class]] && appId.length > 0)) {
         NSError *error = [NSError errorWithDomain:errorDomain
                                              code:errorCode
@@ -29,8 +43,10 @@ This is a sample for initialize
             complete(error);
         }
     } else {
+        //Best set before sdk's init
         [BUAdSDKManager setGDPR:collectPersonalInfo ? 0 : 1];
 
+        //set your adnetwork's info to pangle
         [BUAdSDKManager setUserExtData:@"[{\"name\":\"mediation\",\"value\":\"your_network_name\"},{\"name\":\"adapter_version\",\"value\":\"this_adapter_name\"}]"];
 
         [BUAdSDKManager setAppID:appId];
@@ -40,6 +56,7 @@ This is a sample for initialize
     }
 }
 
+@end
 
 ```
 
