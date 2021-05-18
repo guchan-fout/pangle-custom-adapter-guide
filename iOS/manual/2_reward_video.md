@@ -3,7 +3,7 @@
 Here is the common methods and delegate to use for building pangle 's reward video's adapter.
 
   * [Create placement](#start/create_placement)
-  * [Loading Ads and display](#start/reward_ad_load)
+  * [Loading ads and display](#start/reward_ad_load)
   * [Determining load events](#start/reward_ad_loadevent)
 
 
@@ -38,7 +38,7 @@ Create a `BURewardedVideoModel` first for setting userId or other information yo
 
 
 
-#### 2.Load an ad and display it
+#### 2.Load a reward video ad and display
 
 Init a `BURewardedVideoAd` instance, and set the info and placementID o load a reward video ad.
 
