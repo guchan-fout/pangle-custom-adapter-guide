@@ -4,4 +4,5 @@ This guide describes the interfaces(Methods/Delegates) which would be used to bu
 
 
 - [Prerequisites and Initialize](manual/1_prerequisites_initialize.md)
-- [Reward Video](manual/2_reward_video.md)
+- [Reward Video Ads](manual/2_reward_video.md)
+- [Interstitial Video Ads](manual/3_fullscreen_ad.md)
