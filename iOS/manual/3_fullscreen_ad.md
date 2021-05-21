@@ -2,8 +2,8 @@
 
 Here is the common methods and delegate to use for building pangle 's interstitial video's adapter.
 
-  * [Loading ads and display](#start/reward_ad_load)
-  * [Determining load events](#start/reward_ad_loadevent)
+  * [Create placement](#start/create_placement)
+  * [Loading ads and display](#start/fullscreen_ad_load)
 
 
 Please [initialize the Pangle SDK](1_prerequisites_initialize) before loading ads.
@@ -19,7 +19,7 @@ Please set the ad's `Orientation` to fit for the app.
 
 <img src="pics/fullscreen_set.png" alt="drawing" width="300"/>
 
-<a name="start/reward_ad_load"></a>
+<a name="start/fullscreen_ad_load"></a>
 ### Loading Ads
 
 
@@ -34,7 +34,7 @@ Use `- (void)loadAdData;` to load an interstitial ad.
 | method | description |
 | :--- | :--- |
 | - (instancetype)initWithSlotID:(NSString *)slotID; | Create a object with soltID(placementID) |
-| @property (nonatomic, weak, nullable) id<BUFullscreenVideoAdDelegate> delegate; | This is a **must be** set parameter to get callback from ad load|
+| @property (nonatomic, weak, nullable) id< BUFullscreenVideoAdDelegate > delegate; | This is a **must be** set parameter to get callback from ad load|
 | - (void)loadAdData; | Use this to load an ad after `initWithSlotID` |
 | - (BOOL)showAdFromRootViewController:(UIViewController *)rootViewController; | Use this to show the ad if ad load succeed |
 

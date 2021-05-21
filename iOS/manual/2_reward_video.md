@@ -4,7 +4,6 @@ Here is the common methods and delegate to use for building pangle 's reward vid
 
   * [Create placement](#start/create_placement)
   * [Loading ads and display](#start/reward_ad_load)
-  * [Determining load events](#start/reward_ad_loadevent)
 
 
 Please [initialize the Pangle SDK](1_prerequisites_initialize) before loading ads.
@@ -48,7 +47,7 @@ Init a `BURewardedVideoAd` instance, and set the info and placementID o load a r
 | method | description |
 | :--- | :--- |
 | - (instancetype)initWithSlotID:(NSString *)slotID rewardedVideoModel:(BURewardedVideoModel *)model; | Create a object with soltID(placementID) and model  |
-| @property (nonatomic, weak, nullable) id<BURewardedVideoAdDelegate> delegate; | This is a **must be** set parameter to get callback from ad load|
+| @property (nonatomic, weak, nullable) id< BURewardedVideoAdDelegate > delegate; | This is a **must be** set parameter to get callback from ad load|
 | - (void)loadAdData; | Use this to load an ad after `initWithSlotID` |
 | - (BOOL)showAdFromRootViewController:(UIViewController *)rootViewController; | Use this to show the ad if ad load succeed |
 
