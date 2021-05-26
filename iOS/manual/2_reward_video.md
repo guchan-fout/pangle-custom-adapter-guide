@@ -44,7 +44,7 @@ Init a `BURewardedVideoAd` instance, and set the info and placementID o load a r
 `BURewardedVideoAdDelegate` will be called when ad's load succeed and use `showAdFromRootViewController` to show the ad.
 
 
-| method | description |
+| methods/parameters | description |
 | :--- | :--- |
 | - (instancetype)initWithSlotID:(NSString *)slotID rewardedVideoModel:(BURewardedVideoModel *)model; | Create a object with soltID(placementID) and model  |
 | @property (nonatomic, weak, nullable) id< BURewardedVideoAdDelegate > delegate; | This is a **must be** set parameter to get callback from ad load|
@@ -58,7 +58,7 @@ The `BURewardedVideoAdDelegate`'s instance you set in the ad load, will give you
 
 ##### Basic callback for common use:
 
-| parameter | when be called by pangle sdk |
+| methods | when be called by pangle sdk |
 | :--- | :--- |
 | - (void)rewardedVideoAdDidLoad:(BURewardedVideoAd *)rewardedVideoAd; | Ad load succeed(video content is no cached), can show ad after here |
 | - (void)rewardedVideoAd:(BURewardedVideoAd *)rewardedVideoAd didFailWithError:(NSError *_Nullable)error; | Ad load failed |

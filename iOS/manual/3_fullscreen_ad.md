@@ -31,7 +31,7 @@ Use `- (void)loadAdData;` to load an interstitial ad.
 
 `BUFullscreenVideoAdDelegate` will be called when ad's load succeed and use `(BOOL)showAdFromRootViewController:(UIViewController *)rootViewController;` to show the ad.
 
-| method | description |
+| methods/parameters | description |
 | :--- | :--- |
 | - (instancetype)initWithSlotID:(NSString *)slotID; | Create a object with soltID(placementID) |
 | @property (nonatomic, weak, nullable) id< BUFullscreenVideoAdDelegate > delegate; | This is a **must be** set parameter to get callback from ad load|
@@ -47,7 +47,7 @@ The `BUFullscreenVideoAdDelegate`'s instance you set in the ad load, will give y
 
 ##### Basic callback for common use:
 
-| parameter | when be called by pangle sdk |
+| methods | when be called by pangle sdk |
 | :--- | :--- |
 | - (void)fullscreenVideoMaterialMetaAdDidLoad:(BUFullscreenVideoAd *)fullscreenVideoAd; | Ad load succeed(video content is no cached), can show ad after here |
 | - (void)fullscreenVideoAd:(BUFullscreenVideoAd *)fullscreenVideoAd didFailWithError:(NSError *_Nullable)error; | Ad load failed |

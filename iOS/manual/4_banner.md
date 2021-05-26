@@ -31,13 +31,13 @@ You will get a **placement ID** for ad's loading.
 <a name="start/template_banner_ad_load"></a>
 ### Loading Ads
 
-#### 1.Load a banner ad and display
+#### 1.Load a banner
 
 
 Create a `BUNativeExpressBannerView` for setting slotID(placementID), rootViewController and size of banner.
 
 
-| method | description |
+| methods/parameters | description |
 | :--- | :--- |
 | - (instancetype)initWithSlotID:(NSString *)slotID rootViewController:(UIViewController *)rootViewController adSize:(CGSize)adsize; | Create a object with soltID(placementID),<br>rootViewController for loading <br>CGSize for the size of banner.**Please set this size to 300 * 250 or 320 * 50** |
 | @property (nonatomic, weak, nullable) id< BUNativeExpressBannerViewDelegate > delegate; | This is a **must be** set parameter to get callback from ad load|
@@ -51,7 +51,7 @@ Create a `BUNativeExpressBannerView` for setting slotID(placementID), rootViewCo
 
 ##### Basic callback for common use:
 
-| parameter | when be called by pangle sdk |
+| methods | when be called by pangle sdk |
 | :--- | :--- |
 | - (void)nativeExpressBannerAdViewDidLoad:(BUNativeExpressBannerView *)bannerAdView; | Ad load succeed but not rendered yet |
 | - (void)nativeExpressBannerAdView:(BUNativeExpressBannerView *)bannerAdView didLoadFailWithError:(NSError *_Nullable)error; | Ad load failed |
