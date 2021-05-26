@@ -1,4 +1,4 @@
-# Pangle iOS SDK custom adapter sample
+# Pangle iOS SDK's custom adapter building guide
 
 This guide describes the interfaces(Methods/Delegates) which would be used to build Pangle iOS SDK's adapters for your adnetwork.
 
