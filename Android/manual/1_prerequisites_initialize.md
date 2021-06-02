@@ -17,7 +17,7 @@ This guide is for you to build Pangle Android SDK's mediation for your adnetwork
   |  3.3.3 |
 
 ## Update the Android Manifest
-  Add following permissions and **provider** to your app's `AndroidManifest.xml`.
+  Add following permissions and **provider** to `AndroidManifest.xml`.
 
   > :warning: Please make sure to add **provider** or ad's loading will not work properly.
 
