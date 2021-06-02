@@ -57,7 +57,7 @@ After get the ad's load succeed callback by the listener, use `TTRewardVideoAd`'
 
 When getting callback from `RewardVideoAdListener`, a `TTRewardVideoAd` will be sent in the callback method if load succeed.
 
-`RewardAdInteractionListener` in the `TTRewardVideoAd` is the listener to indicates reward video's status.
+`RewardAdInteractionListener` in the `TTRewardVideoAd` is the listener to indicates the reward video's status.
 
 | methods | description |
 | :--- | :--- |
