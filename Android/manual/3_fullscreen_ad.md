@@ -33,7 +33,6 @@ AdSlot adSlot = new AdSlot.Builder()
         .build();
 ```
 
-
 Use `TTAdNative createAdNative(Context var1);` in `TTAdManager` to create a TTAdNative's instance.
 
 Use `void loadFullScreenVideoAd(AdSlot var1, @NonNull TTAdNative.FullScreenVideoAdListener var2);` in the TTAdNative's instance to load the ad.
