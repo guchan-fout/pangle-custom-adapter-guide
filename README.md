@@ -1,4 +1,4 @@
-# Pangle custom adapter sample
+# Pangle custom adapter guide
 
 This guide is for you to build Pangle SDK's adapters for your adnetwork.
 

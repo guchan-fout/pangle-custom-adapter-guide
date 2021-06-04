@@ -16,6 +16,32 @@ This guide is for you to build Pangle Android SDK's mediation for your adnetwork
   |  3.4.3 |
   |  3.3.3 |
 
+## Import and Integrate
+Add `url 'https://artifact.bytedance.com/repository/pangle'` maven in the `allprojects` section of your project-level `build.gradle`.
+
+```gradle
+allprojects {
+    repositories {
+      maven {
+        url 'https://artifact.bytedance.com/repository/pangle'
+      }
+    }
+}
+```
+
+Next, add `implementation 'com.pangle.global:ads-sdk:x.x.x.x'` in "dependencies" section in the app-level `build.gradle` file.
+In order to use the Android Advertising ID, we also recommend add  `com.google.android.gms:play-services-ads-identifier`.
+
+```gradle
+dependencies {
+    ...
+    implementation 'com.pangle.global:ads-sdk:3.5.0.5'
+    implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0'
+    ...
+
+}
+```
+
 ## Update the Android Manifest
   Add following permissions and **provider** to `AndroidManifest.xml`.
 

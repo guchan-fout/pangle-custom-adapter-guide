@@ -10,6 +10,13 @@ This guide is for you to build Pangle iOS SDK's mediation for your adnetwork.
 - Create a Pangle account [here](https://www.pangleglobal.com/)(If you do not have one), and add your app and placements.
 
 
+## Import and Integrate
+We support and recommend to use CocoaPods, please add the information as follows in Podfile to download and integrate.
+
+```
+//This SDK is for the traffic outside the Chinese Mainland
+pod 'Ads-Global'
+```
 
 ## Initialize
 
