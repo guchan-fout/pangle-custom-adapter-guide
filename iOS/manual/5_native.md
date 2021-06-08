@@ -66,6 +66,7 @@ You **also must** init a `BUNativeAdRelatedView` and call `- (void)refreshData:(
 | @property (nonatomic, weak, readwrite, nullable) id< BUNativeAdDelegate > delegate | This delegate will inform the status of native ad's load/show/click/etc. |
 | @property (nonatomic, weak, readwrite) UIViewController *rootViewController; | This is a **must be** set parameter for SDK to handle ad's actions |
 | @property (atomic, strong, readonly, nullable) BUMaterialMeta *data; | Main elements are in this paremeters |
+| - (void)registerContainer:(__kindof UIView *)containerView withClickableViews:(NSArray<__kindof UIView *> *_Nullable)clickableViews; | This is a **must be** set method to enable ad's click action |
 
 
 ##### Elements in BUMaterialMeta

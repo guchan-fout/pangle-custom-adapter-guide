@@ -89,6 +89,6 @@ dependencies {
 | coppa | 0:adult ，1:child |
 | setGDPR | 0: disable GDRP Privacy protection ; 1: enable GDRP Privacy protection. |
 
-`public static TTAdManager init(Context var0, TTAdConfig var1)` in Class 'TTAdSdk' is the method for initializing Pangle SDK with a Context instance and the `TTAdConfig`'s instance as the arguments.
+`public static void init(final Context var0, final TTAdConfig var1, final TTAdSdk.InitCallback var2)` in Class 'TTAdSdk' is the method for initializing Pangle SDK with a Context instance and the `TTAdConfig`'s instance as the arguments, `TTAdSdk.InitCallback` will be informed about the init result.
 
-`TTAdSdk.init()` only need to be called once per app’s lifecycle, we strongly recommend to do this on app launch.
+`init` only need to be called once per app’s lifecycle, we strongly recommend to do this on app launch.
